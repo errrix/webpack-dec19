@@ -1,3 +1,4 @@
+//Дополнительная часть конфига для процесса сборки продакшена
 let path = require('path');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');

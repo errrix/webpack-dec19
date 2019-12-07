@@ -1,18 +1,21 @@
+//Основной конфиг, который используется и в дев и в прод режиме
 let path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    //Точка входа
     entry: {
         main: './src/js/main.js'
     },
-
+    //Пути для собранных файлов
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].js',
         publicPath: ''
     },
 
+    //Оптимизация вебпака из коробки, нужна для уменьшения размеров файлов
     optimization: {
         splitChunks: {
             cacheGroups: {
@@ -26,6 +29,7 @@ module.exports = {
         }
     },
 
+    //Лоадеры для конкретных типов файлов
     module: {
         rules: [
             {
@@ -49,6 +53,7 @@ module.exports = {
             }
         ]
     },
+    //Плагины для обработнки файлов, путей етс
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
