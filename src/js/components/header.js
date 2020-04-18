@@ -1,3 +1,3 @@
 (() => {
-    console.log('super test!');
+    console.log('super test!11123');
 })();

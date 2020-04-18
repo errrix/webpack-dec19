@@ -1,5 +1,13 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
 .bg-cat {
   background-image: url("../img/cat.jpg");
+  background-repeat: no-repeat;
   width: 200px;
   height: 200px;
 }

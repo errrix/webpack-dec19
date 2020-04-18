@@ -11,7 +11,7 @@ module.exports = {
     //Пути для собранных файлов
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js',
+        filename: 'js/[name].[contenthash].js',
         publicPath: ''
     },
 
@@ -61,11 +61,6 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
-        }),
-
-        // new HtmlWebpackPlugin({
-        //     filename: 'contact.html',
-        //     template: 'src/contact.html'
-        // })
+        })
     ]
 };
